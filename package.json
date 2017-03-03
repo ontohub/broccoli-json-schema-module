@@ -1,21 +1,23 @@
 {
-  "name": "broccoli-json-module",
-  "description": "Converts JSON files to ES6 modules",
+  "name": "broccoli-json-schema-module",
+  "description": "Converts JSON Schema files to dereferenced ES6 modules",
   "version": "1.0.0",
   "author": "Gordon L. Hempton <ghempton@gmail.com>",
   "main": "index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ghempton/broccoli-json-module"
+    "url": "https://github.com/phyrog/broccoli-json-schema-module"
   },
   "keywords": [
     "broccoli-plugin",
     "json",
+    "schema",
     "es6",
     "modules"
   ],
   "dependencies": {
-    "broccoli-filter": "^1.2.4"
+    "broccoli-filter": "^1.2.4",
+    "json-schema-deref": "^0.3.5"
   }
 }
