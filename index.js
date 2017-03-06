@@ -26,8 +26,11 @@ JsonModule.prototype.processFile =
   var contents = fs.readFileSync(
       srcDir + '/' + relativePath, { encoding: inputEncoding });
 
-  console.log(destDir);
-  console.log(__dirname);
+  fs.readdir(path.resolve(srcDir, path.dirname(relativePath)), (err, files) => {
+    files.forEach(file => {
+      console.log(file);
+    });
+  });
 
   return Promise.resolve(this.processString(contents, relativePath, srcDir)).
       then(function asyncOutputFilteredFile(outputString) {
@@ -47,7 +50,7 @@ JsonModule.prototype.processString = function (string, relativePath, srcDir) {
   console.log('Processing file "' + relativePath + '" with dir "' + srcDir + '"');
   return new Promise(function(res, rej) {
     var schema = JSON.parse(string);
-    deref(schema, srcDir, (err, fullSchema) => {
+    deref(schema, path.resolve(srcDir, path.dirname(relativePath)), (err, fullSchema) => {
       if(err) {
         rej(err);
       } else {
