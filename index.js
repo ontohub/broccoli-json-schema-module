@@ -26,6 +26,9 @@ JsonModule.prototype.processFile =
   var contents = fs.readFileSync(
       srcDir + '/' + relativePath, { encoding: inputEncoding });
 
+  console.log(destDir);
+  console.log(__dirname);
+
   return Promise.resolve(this.processString(contents, relativePath, srcDir)).
       then(function asyncOutputFilteredFile(outputString) {
         var outputPath = self.getDestFilePath(relativePath);
