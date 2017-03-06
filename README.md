@@ -7,7 +7,7 @@ A file named `config.json` with contents `{}` will be transformed into `config.j
 ## Installation
 
 ```bash
-npm install --save-dev phyrog/broccoli-json-schema-module
+npm install --save-dev ontohub/broccoli-json-schema-module
 ```
 
 ## Usage

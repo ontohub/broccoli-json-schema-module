@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/phyrog/broccoli-json-schema-module"
+    "url": "https://github.com/ontohub/broccoli-json-schema-module"
   },
   "keywords": [
     "broccoli-plugin",
