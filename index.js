@@ -41,7 +41,7 @@ JsonModule.prototype.processFile =
 };
 
 JsonModule.prototype.processString = function (string, relativePath, srcDir) {
-  console.log('Processing');
+  console.log('Processing file "' + relativePath + '" with dir "' + srcDir + '"');
   return new Promise(function(res, rej) {
     var schema = JSON.parse(string);
     deref(schema, srcDir, (err, fullSchema) => {
