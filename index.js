@@ -1,4 +1,7 @@
-var Filter = require('broccoli-filter')
+var path = require('path');
+var fs = require('fs');
+var mkdirp = require('mkdirp');
+var Filter = require('broccoli-filter');
 var deref = require('json-schema-deref');
 
 module.exports = JsonModule
